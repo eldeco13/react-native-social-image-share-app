@@ -33,10 +33,7 @@ export default function App() {
       <Image 
         source={{uri: selectedImage.localUri}} 
         style={styles.thumbnail} />
-        <TouchableOpacity
-          onPress={openShareDialogAsync} style={styles.button} >
-            <Button text={"Share this photo!"}/>
-        </TouchableOpacity>
+          <Button press={openShareDialogAsync} text={"Share this photo!"} />
     </View>
     );
   }
@@ -49,7 +46,7 @@ export default function App() {
         </Text>  
         <Image source={{uri: "https://i.imgur.com/TkIrScD.png"}} style={styles.logo} />
 
-        <Button press={openImagePickerAsyncpress} text={"choose an image!"}/>
+        <Button press={openImagePickerAsync} text={"choose an image!"}/>
     </View>
   );
 }
