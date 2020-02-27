@@ -33,10 +33,12 @@ export default function App() {
       <Image 
         source={{uri: selectedImage.localUri}} 
         style={styles.thumbnail} />
-          <Button press={openShareDialogAsync} text={"Share this photo!"} />
+          <Button press={openShareDialogAsync} text={"Share this photo!"} alert={showAlert}/>
     </View>
     );
   }
+
+  let showAlert = (message) => alert(message)
 
   return (
     <View style={styles.container}>
@@ -46,7 +48,7 @@ export default function App() {
         </Text>  
         <Image source={{uri: "https://i.imgur.com/TkIrScD.png"}} style={styles.logo} />
 
-        <Button press={openImagePickerAsync} text={"choose an image!"}/>
+        <Button press={openImagePickerAsync} text={"choose an image!"} alert={showAlert}/>
     </View>
   );
 }
